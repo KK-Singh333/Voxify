@@ -22,7 +22,7 @@ const userAuthenticator = checkForAuthenticationCookie('token');
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://voxify-ivory.vercel.app/",
+    origin: "https://voxify-ivory.vercel.app",
     credentials: true,
   })
 );
