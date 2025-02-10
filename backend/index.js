@@ -13,7 +13,10 @@ const checkAuthor = require('./routes/check_author.js')
 const EditBlog = require('./routes/edit.js');
 const cookieParser = require("cookie-parser");
 const { checkForAuthenticationCookie, authenticateAsAuthor } = require("./middlewares/authentication.js");
-mongoose.connect('mongodb://localhost:27017/Voxify_User_Data').then((e) => {console.log("MongoDB connected");
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then((e) => {console.log("MongoDB connected");
 });
 const userAuthenticator = checkForAuthenticationCookie('token');
 app.use(express.json());
