@@ -18,7 +18,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav  className="ms-auto d-flex align-items-center">
-            <Nav.Link style={{color:"#E0E0E0"}} className="p-3"  href=`{API_BASE_URL}/home`>Home</Nav.Link>
+            <Nav.Link style={{color:"#E0E0E0"}} className="p-3"  href=`${API_BASE_URL}/home`>Home</Nav.Link>
             <Nav.Link style={{color:"#E0E0E0"}} className="p-3" href="/account">Account</Nav.Link>
             <Nav.Link style={{color:"#E0E0E0"}} className="p-3" href="/contact">Contact Us</Nav.Link>
             {Cookies.get('token')?<Nav.Link style={{color:"#E0E0E0"}} className="p-3" onClick={handleSignOut} href="/login">Sign Out</Nav.Link>:<Nav.Link style={{color:"#E0E0E0"}} className="p-3" href="/login">Sign In</Nav.Link> }
