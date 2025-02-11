@@ -9,7 +9,18 @@ import './navbar.css';
 function NavBar() {
     const navigate = useNavigate();
     const handleSignOut = () => {
-        Cookies.remove('token');
+        // Cookies.remove('token');
+        const response=await fetch(`${API_BASE_URL}/signout`,{
+            method:'GET',
+            credentials:'include',
+        });
+        const data=await response.json();
+        if(data.errorflag==='no'){
+            alert('User successfully logged out');
+        }
+        else{
+            alert('Log Out Failure');
+        }
      }
     async function CheckCookie(){
         const response=await fetch(`${API_BASE_URL}/userdata`,{
