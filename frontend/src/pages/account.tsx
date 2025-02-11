@@ -16,7 +16,7 @@ const Account = () => {
             setUserData(data);
         }
         Data();
-    }, []);
+    });
     return (<>
         <NavBar></NavBar>
         <div className="details-outer">
