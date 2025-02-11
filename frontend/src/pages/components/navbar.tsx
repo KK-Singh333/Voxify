@@ -16,6 +16,11 @@ function NavBar() {
         });
         const data=await response.json();
         if(data.errorflag==='no'){
+            Cookies.remove("token", { path: "/" }); 
+    localStorage.clear();
+    sessionStorage.clear(); 
+    window.history.replaceState(null, "", "/login"); 
+    window.location.href = "/login";
             alert('User successfully logged out');
         }
         else{
