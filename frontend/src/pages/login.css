@@ -7,16 +7,19 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 50%;
-    width: 25%;
+    height: 26rem;
+    width: 18rem;
     transform: translate(-50%, -50%);
     color: #E0E0E0;
+    border: 2px solid white;
 
 }
 
 .login-head {
-    transform: translate(9.5rem);
+    position: relative;
+    left: 33%;
     padding-bottom: 3rem;
     font-weight: 600;
     text-decoration-line: underline;
+    font-size: 2rem !important;
 }
