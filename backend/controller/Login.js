@@ -8,7 +8,7 @@ async function handleLogin(req, res) {
         console.log(Token);
         
         res.cookie('token', Token, {
-  domain: "voxify-qeb1.onrender.com",
+ 
   path: "/",
   httpOnly: true,
   secure: true,
