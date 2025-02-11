@@ -8,7 +8,7 @@ import './navbar.css';
 
 function NavBar() {
     const navigate = useNavigate();
-    const handleSignOut = () => {
+    const handleSignOut =async () => {
         // Cookies.remove('token');
         const response=await fetch(`${API_BASE_URL}/signout`,{
             method:'GET',
