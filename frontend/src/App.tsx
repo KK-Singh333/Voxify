@@ -8,6 +8,7 @@ import WriteBlog from "./pages/write_blog.tsx";
 import Account from "./pages/account.tsx";
 import EditPage from "./pages/edit.tsx";
 import Contact from "./pages/contact.tsx";
+import {useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() { 
