@@ -11,8 +11,8 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 30%;
-    height: 25%;
+    width: 18rem;
+    height: 24rem;
     border: 2px solid white;
     border-radius: 2rem;
     transform: translate(-50%,-50%);
