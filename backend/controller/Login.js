@@ -7,7 +7,13 @@ async function handleLogin(req, res) {
         const Token = await User.checkPassword(Email, Password);
         console.log(Token);
         
-        res.cookie('token', Token);
+        res.cookie('token', Token, {
+  domain: "https://voxify-qeb1.onrender.com",
+  path: "/",
+  httpOnly: true,
+  secure: true,
+  sameSite: "None"
+});
         
         return res.json({redirecturl:'/home',errorflag:'no'});
     }
