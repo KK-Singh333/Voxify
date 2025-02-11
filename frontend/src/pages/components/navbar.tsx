@@ -11,6 +11,19 @@ function NavBar() {
     const handleSignOut = () => {
         Cookies.remove('token');
      }
+    async function CheckCookie(){
+        const response=await fetch(`${API_BASE_URL}/userdata`,{
+            method:'GET',
+            credentials:'include',
+        });
+        const data=await response.json();
+        if(data?.errorflag==='yes'){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
   return (
       <Navbar expand="lg" style={{width:'98%',border:'2px solid white',backgroundColor:'#1E1E1E',marginBottom:'1rem',marginTop:'1rem',marginLeft:'1rem',marginRight:'1rem'}} className=" rounded">
           <Container fluid style={{ paddingLeft: "4rem",paddingRight:"2rem" }}>
@@ -21,7 +34,7 @@ function NavBar() {
             <Nav.Link style={{color:"#E0E0E0"}} className="p-3"  href='/home'>Home</Nav.Link>
             <Nav.Link style={{color:"#E0E0E0"}} className="p-3" href="/account">Account</Nav.Link>
             <Nav.Link style={{color:"#E0E0E0"}} className="p-3" href="/contact">Contact Us</Nav.Link>
-            {Cookies.get('token')?<Nav.Link style={{color:"#E0E0E0"}} className="p-3" onClick={handleSignOut} href="/login">Sign Out</Nav.Link>:<Nav.Link style={{color:"#E0E0E0"}} className="p-3" href="/login">Sign In</Nav.Link> }
+            {CheckCookie()?<Nav.Link style={{color:"#E0E0E0"}} className="p-3" onClick={handleSignOut} href="/login">Sign Out</Nav.Link>:<Nav.Link style={{color:"#E0E0E0"}} className="p-3" href="/login">Sign In</Nav.Link> }
           </Nav>
         </Navbar.Collapse>
       </Container>
