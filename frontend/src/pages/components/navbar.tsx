@@ -41,7 +41,7 @@ function NavBar() {
         }
     }
   return (
-      <Navbar expand="lg" style={{width:'98%',border:'2px solid white',backgroundColor:'#1E1E1E',marginBottom:'1rem',marginTop:'1rem',marginLeft:'1rem',marginRight:'1rem'}} className=" rounded">
+      <Navbar expand="lg" style={{width:'95%',border:'2px solid white',backgroundColor:'#1E1E1E',marginBottom:'1rem',marginTop:'1rem',marginLeft:'1rem',marginRight:'1rem'}} className=" rounded">
           <Container fluid style={{ paddingLeft: "4rem",paddingRight:"2rem" }}>
               <Navbar.Brand style={{color:"#E0E0E0"}} href="/home">VOXIFY</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
