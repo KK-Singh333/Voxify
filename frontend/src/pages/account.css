@@ -26,9 +26,9 @@
     flex-basis: 20%;
 }
 @media(max-width:780px){
-    .details-outer{
+/*     .details-outer{
        top: 25%;
-    }
+    } */
     .details-outer h1{
         font-size: 2rem;
     }
