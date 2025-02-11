@@ -11,6 +11,19 @@ import Contact from "./pages/contact.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() { 
+ 
+    useEffect(() => {
+        window.addEventListener("pageshow", (event) => {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+
+        return () => {
+            window.removeEventListener("pageshow", () => {});
+        };
+    }, []);
+
   return (
     <BrowserRouter>
       <Routes>
