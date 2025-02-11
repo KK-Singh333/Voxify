@@ -48,7 +48,7 @@ function SearchBar({ blogs, setBlogs }) {
      }
   return (
     <>
-          <InputGroup style={{width:'95%',border:'2px solid white',borderRadius:'0.6rem',marginLeft:'2.7rem',marginBottom:'3rem'}} className="">
+          <InputGroup style={{width:'90%',border:'2px solid white',borderRadius:'0.6rem',marginLeft:'2.7rem',marginBottom:'3rem'}} className="">
         <Form.Control
         name='keyword'
         onChange={handleChange}
