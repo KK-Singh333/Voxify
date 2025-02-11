@@ -8,7 +8,7 @@ async function handleLogin(req, res) {
         console.log(Token);
         
         res.cookie('token', Token, {
-  domain: "https://voxify-qeb1.onrender.com",
+  domain: "voxify-qeb1.onrender.com",
   path: "/",
   httpOnly: true,
   secure: true,
@@ -17,7 +17,8 @@ async function handleLogin(req, res) {
         
         return res.json({redirecturl:'/home',errorflag:'no'});
     }
-    catch {
+    catch(e) {
+        console.log(e.message);
        return res.json({ redirecturl: "/login", errorflag: "yes" });
      }
 }
