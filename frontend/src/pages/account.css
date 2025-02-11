@@ -10,6 +10,7 @@
     /* width: 30%; */
     margin-top: 3rem;
     text-align: center;
+    width: fit-content;
 }
 .details-outer p{
     font-size: 1.5rem;
@@ -26,9 +27,9 @@
     flex-basis: 20%;
 }
 @media(max-width:780px){
-/*     .details-outer{
+    .details-outer{
        top: 25%;
-    } */
+    }
     .details-outer h1{
         font-size: 2rem;
     }
@@ -36,7 +37,7 @@
         font-size: 1rem;
     }
     .details-button{
-        margin-left: 0.5rem;
+        /* margin-left: 0.5rem; */
     }
     .details-button button{
         transform: scale(0.7);
