@@ -5,12 +5,13 @@
     box-sizing: border-box;
 }
 #root{
+    min-height: 100vh;
     background-color: #121212;
 }
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
-    color: white;
+       color: white;
 }
 .blog-section{
     display: flex;
@@ -18,6 +19,8 @@ body {
     justify-content: space-between;
     padding: 4rem;
     margin-top: 0;
+    min-height: 100vh;
+        width: 100vw;
 }
 .welcome{
     border: 2px solid white;
@@ -27,6 +30,7 @@ body {
     color: #E0E0E0;
     margin-left: 3rem;
     text-align: center;
+    height: 45rem;
 }
 .list-container{
     margin-left: 4rem;
@@ -34,7 +38,7 @@ body {
 .list-item{
     font-size: 120% !important;
 }
-@media(max-width:1450px){
+@media(max-width:1500px){
     .list-item{
         font-size: 80% !important;
         }
@@ -43,9 +47,45 @@ body {
     }
     .welcome p{
         font-size: 1rem;
+        .welcome{
+            height: 50rem;
+        }
     }
     }
+        @media(max-width:1270px) {
+            .welcome{
+                height: 50rem;
+            }
+            .list-item {
+                font-size: 80% !important;
+            }
+    
+            .welcome h1 {
+                font-size: 2rem;
+            }
+    
+            .welcome p {
+                font-size: 1rem;
+            }
+        }
+@media(max-width:970px) {
+    .welcome h2{
+    font-size: 1rem !important;
+}  
+.welcome p{
+    padding: 0;
+    margin: 0.5rem;
+}
+}
 @media(max-width:780px){
+    #root{
+        overflow-y: scroll;
+    }
+    .list-container{
+        position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+    }
     .blog-section{
         flex-wrap: wrap-reverse;
     }
@@ -58,14 +98,30 @@ body {
         .welcome h1 {
             font-size: 1.5rem;
         }
-    
+        .welcome h2{
+            font-size: 1rem;
+        }
         .welcome p {
             font-size: 0.75rem;
+        }
+        .welcome{
+            height: 35rem;
         }
     .list-container{
         margin-left: 0;
     }
     .welcome{
-        margin-left: 7.5rem;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-10%);
+        width: 40rem;
+    }
+}
+@media(max-width:500px){
+    .welcome h2{
+        font-size: 0.75rem;
     }
 }
