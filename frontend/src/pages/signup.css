@@ -6,14 +6,24 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 50%;
-    width: 25%;
+    height: 35rem;
+    width: 20;
     transform: translate(-50%,-50%);
+    border: 2px solid white;
+    margin: 0 !important;
+    padding: 0 !important;
     
 }
 .signup-head{
-    transform: translate(9.5rem);
+    position: relative;
+    left: 25.5%;
     padding-bottom: 3rem;
     font-weight: 600;
     text-decoration-line: underline;
+    font-size: 2rem !important;
+}
+@media(max-width:400px){
+    .signup-head{
+        font-size: 1.5rem !important;
+    }
 }
