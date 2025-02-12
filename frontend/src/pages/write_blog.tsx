@@ -17,9 +17,6 @@ function WriteBlog() {
         setFormData({...formData,[e.target.name]:e.target.value});
     }
     const handleSubmit = async (e) => { 
-        const data_request = await fetch(`${API_BASE_URL}/userdata`);
-        const user_data = await data_request.json();
-        console.log(user_data);
         const response = await fetch(`${API_BASE_URL}/write_blog`, {
             method: 'POST',
             headers: {
