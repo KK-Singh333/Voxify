@@ -10,7 +10,7 @@ function WriteBlog() {
     const [formData, setFormData] = useState({
         Email: '',
         Author: '',
-        Titele: '',
+        Title: '',
         Content:'',
     });
     const handleChange = (e:React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -24,7 +24,7 @@ function WriteBlog() {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({...formData,Author:user_data.Name,Email:user_data.Email}),
+            body: JSON.stringify({...formData}),
             credentials:'include',
         })
         console.log("hello2");
