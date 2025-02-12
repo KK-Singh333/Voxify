@@ -19,7 +19,7 @@ const handleCreatedBlog = async (req, res) => {
         console.log("Blog Created");
         res.status(200);
         return res.json({
-            errorflage: 'no',
+            errorflag: 'no',
             redirecturl:'/writeblog'
         });
     }
