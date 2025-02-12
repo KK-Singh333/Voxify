@@ -17,6 +17,7 @@ function WriteBlog() {
         setFormData({...formData,[e.target.name]:e.target.value});
     }
     const handleSubmit = async (e) => { 
+         e.preventDefault();
         console.log("hello1");
         const response = await fetch(`${API_BASE_URL}/write_blog`, {
             method: 'POST',
