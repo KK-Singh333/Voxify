@@ -17,6 +17,7 @@ function WriteBlog() {
         setFormData({...formData,[e.target.name]:e.target.value});
     }
     const handleSubmit = async (e) => { 
+        console.log("hello1");
         const response = await fetch(`${API_BASE_URL}/write_blog`, {
             method: 'POST',
             headers: {
@@ -25,6 +26,7 @@ function WriteBlog() {
             body: JSON.stringify({...formData,Author:user_data.Name,Email:user_data.Email}),
             credentials:'include',
         })
+        console.log("hello2");
         const data = await response.json();
         console.log(data);
         if (data.errorflag === 'no') {
@@ -48,7 +50,7 @@ function WriteBlog() {
         <Form.Label>Content</Form.Label>
         <Form.Control as="textarea" style={{backgroundColor:'#888888'}} value={formData.Content} onChange={handleChange} name='Content' rows={30} />
           </Form.Group>
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
+          <Button variant="primary" type="submit" href="" onClick={handleSubmit}>
         Submit
       </Button>
             </Form>
