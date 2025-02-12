@@ -19,6 +19,7 @@ function WriteBlog() {
     const handleSubmit = async (e) => { 
         const data_request = await fetch(`${API_BASE_URL}/userdata`);
         const user_data = await data_request.json();
+        console.log(user_data);
         const response = await fetch(`${API_BASE_URL}/write_blog`, {
             method: 'POST',
             headers: {
@@ -28,6 +29,7 @@ function WriteBlog() {
             credentials:'include',
         })
         const data = await response.json();
+        console.log(data);
         if (data.errorflag === 'no') {
             alert('Successfully posted');
         }
