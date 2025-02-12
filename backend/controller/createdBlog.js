@@ -16,6 +16,7 @@ const handleCreatedBlog = async (req, res) => {
             Author: author,
         }
         )
+        console.log("Blog Created");
         res.status(200);
         return res.json({
             errorflage: 'no',
