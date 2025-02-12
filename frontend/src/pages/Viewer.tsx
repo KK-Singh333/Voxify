@@ -21,10 +21,10 @@ function Viewer() {
         body: JSON.stringify({
             model: "llama3-8b-8192",
             messages: [
-                { role: "system", content: "You are an AI that summarizes text concisely." },
+                { role: "system", content: "You are an AI that summarizes text concisely.Reply in about 50 words" },
                 { role: "user", content: `Summarize this: ${input.Content}` }
             ],
-            max_tokens: 50
+           
         })
     });
 
