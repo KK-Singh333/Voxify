@@ -65,11 +65,6 @@ function BlogList({ blogs, setBlogs }) {
                 <p>3.xxxxxx</p>
                 <p>4.xxxxxx</p>
                 <p>5.xxxxxx</p>
-                <p>6.xxxxxx</p>
-                <p>7.xxxxxx</p>
-                <p>8.xxxxxx</p>
-                <p>9.xxxxxx</p>
-                <p>10.xxxxxx</p>
             </div>
         </div>
   );
