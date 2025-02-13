@@ -34,9 +34,11 @@ body {
 }
 .list-container{
     margin-left: 4rem;
+    min-width: 3rem !important;
 }
 .list-item{
     font-size: 120% !important;
+    min-width: 3rem !important;
 }
 @media(max-width:1500px){
     .list-item{
