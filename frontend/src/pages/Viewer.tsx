@@ -22,7 +22,7 @@ function Viewer() {
             model: "llama3-8b-8192",
             messages: [
                 { role: "system", content: "You are an AI that summarizes text concisely. Ensure summary is clear,logical and contains only complete sentences.." },
-                { role: "user", content: `Summarize this ensuring that the output contains only complete sentences: ${input.Content}` }
+                { role: "user", content: `Summarize this ensuring that the output contains only complete sentences and add not other statement other than only summary in response: ${input.Content}` }
             ],
            
         })
