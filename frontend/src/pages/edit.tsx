@@ -110,7 +110,7 @@ function EditPage() {
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Content</Form.Label>
-        <Form.Control as="textarea" style={{backgroundColor:'#888888'}} value={editData.Content} onChange={handleEditChange} name='Content' rows={30} />
+        <Form.Control as="textarea" style={{backgroundColor:'#888888'}} value={editData.Content} onChange={handleEditChange} name='Content' rows={25} />
           </Form.Group>
           <Button variant="primary" type="submit" onClick={handleEditSubmit}>
         Submit
